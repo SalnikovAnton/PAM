@@ -65,8 +65,9 @@ fi
 #%PAM-1.0
 auth       substack     password-auth
 auth       include      postlogin
-account    required     dad
+account    required     pam_sepermit.so
 account    required     pam_nologin.so
+account    required     pam_exec.so /usr/local/bin/login.sh
 account    include      password-auth
 password   include      password-auth
 # pam_selinux.so close should be the first session rule
@@ -79,13 +80,6 @@ session    optional     pam_keyinit.so force revoke
 session    optional     pam_motd.so
 session    include      password-auth
 session    include      postlogin
+
 ```
 На этом настройка завершена.   
-
-
-
-
-
-
-
-
