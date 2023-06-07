@@ -83,3 +83,14 @@ session    include      postlogin
 
 ```
 На этом настройка завершена.   
+Выполним проверку, и попытаемся авторизоваться в выходной день.
+```
+ anton@ml110  ~/pam  ssh otus@192.168.57.10
+otus@192.168.57.10's password: 
+/usr/local/bin/login.sh failed: exit code 1
+Connection closed by 192.168.57.10 port 22
+ ✘ anton@ml110  ~/pam  ssh otusadm@192.168.57.10
+otusadm@192.168.57.10's password: 
+[otusadm@pam ~]$ 
+```
+Все настроено корректно.
