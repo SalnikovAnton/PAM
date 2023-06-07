@@ -1,7 +1,7 @@
 #  PAM
 ### Запретить всем пользователям, кроме группы admin, логин в выходные (суббота и воскресенье), без учета праздников
 
-#### Запускаем вертуальную машину используя [Vagrant-file](https://github.com/SalnikovAnton/Ansible/blob/main/Vagrantfile "Vagrant-file").  
+#### Запускаем вертуальную машину используя [Vagrant-file](https://github.com/SalnikovAnton/pam/blob/main/Vagrantfile "Vagrant-file").  
 После поднятия машины создаём пользователя otusadm и otus, и назначаем пользователям пароли:  
 ```
 [root@pam ~]# sudo useradd otusadm && sudo useradd otus
@@ -80,7 +80,8 @@ session    optional     pam_motd.so
 session    include      password-auth
 session    include      postlogin
 ```
-На этом настройка завершена
+На этом настройка завершена.   
+
 
 
 
